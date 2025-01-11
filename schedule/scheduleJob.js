@@ -3,7 +3,7 @@ import fetchCryptoData from "../data/fetchCryptoData.js";
 
 function scheduleJob() {
  // console.log("call huwa hai");
-  cron.schedule("* */2 * * *", fetchCryptoData);
+  cron.schedule("0 */2 * * *", fetchCryptoData);
 }
 
 export default scheduleJob;

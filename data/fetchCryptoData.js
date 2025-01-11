@@ -3,12 +3,12 @@ import fetch from "node-fetch";
 import cryptoData from "../model/crypto.model.js";
 
 const COINS = ["bitcoin", "matic-network", "ethereum"];
-const API_URL = "https://api.coingecko.com/api/v3/simple/price";
+
 
 async function fetchCryptoData() {
     console.log("fetch");
   try {
-    const response = await fetch(`${API_URL}?ids=${COINS.join(",")}&vs_currencies=usd&include_market_cap=true&include_24hr_change=true`);
+    const response = await fetch(`${process.env.API_URL}?ids=${COINS.join(",")}&vs_currencies=usd&include_market_cap=true&include_24hr_change=true`);
     const data = await response.json();
 
     console.log(data);
