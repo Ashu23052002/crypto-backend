@@ -1,7 +1,7 @@
 import mongoose, { mongo } from "mongoose";
 
 const cryptoSchema = new mongoose.Schema({
-  id: String,
+  coinId: String,
   price: Number,
   marketCap: Number,
   change24h: Number,

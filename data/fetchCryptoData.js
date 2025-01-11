@@ -11,7 +11,7 @@ async function fetchCryptoData() {
     const response = await fetch(`${process.env.API_URL}?ids=${COINS.join(",")}&vs_currencies=usd&include_market_cap=true&include_24hr_change=true`);
     const data = await response.json();
 
-    console.log(data);
+   // console.log(data);
 
     COINS.forEach(async (coin) => {
       const { usd: price, usd_market_cap: marketCap, usd_24h_change: change24h } = data[coin];
