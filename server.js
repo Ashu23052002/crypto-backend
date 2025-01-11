@@ -5,7 +5,7 @@ import scheduleJob from './schedule/scheduleJob.js';
 
 const app = express();
 connectDB();
-// scheduleJob();
+scheduleJob();
 
 app.use(express.json());
 

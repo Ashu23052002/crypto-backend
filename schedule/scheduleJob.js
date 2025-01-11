@@ -1,8 +1,9 @@
 import cron from "node-cron";
-import fetchData from "../data/fetchCryptoData";
+import fetchCryptoData from "../data/fetchCryptoData.js";
 
 function scheduleJob() {
-  cron.schedule("0 */2 * * *", fetchData);
+ // console.log("call huwa hai");
+  cron.schedule("* */2 * * *", fetchCryptoData);
 }
 
 export default scheduleJob;
